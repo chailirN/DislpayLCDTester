@@ -79,6 +79,8 @@
             this.cbxDirect_2 = new System.Windows.Forms.ComboBox();
             this.lbl7 = new System.Windows.Forms.Label();
             this.btnConnect_2 = new System.Windows.Forms.Button();
+            this.btnReset_2 = new System.Windows.Forms.Button();
+            this.btnReset_1 = new System.Windows.Forms.Button();
             this.gbx_1.SuspendLayout();
             this.gbxNotification_1.SuspendLayout();
             this.gbxErrorDevice_1.SuspendLayout();
@@ -140,13 +142,14 @@
             this.gbx_1.Controls.Add(this.btnConnect_1);
             this.gbx_1.Location = new System.Drawing.Point(12, 12);
             this.gbx_1.Name = "gbx_1";
-            this.gbx_1.Size = new System.Drawing.Size(321, 438);
+            this.gbx_1.Size = new System.Drawing.Size(321, 487);
             this.gbx_1.TabIndex = 5;
             this.gbx_1.TabStop = false;
             this.gbx_1.Text = "LCD 1";
             // 
             // gbxNotification_1
             // 
+            this.gbxNotification_1.Controls.Add(this.btnReset_1);
             this.gbxNotification_1.Controls.Add(this.btnMaintenance_2_1);
             this.gbxNotification_1.Controls.Add(this.btnWarning_2_1);
             this.gbxNotification_1.Controls.Add(this.btnEmergency_2_1);
@@ -161,7 +164,7 @@
             this.gbxNotification_1.Controls.Add(this.btnIdle_1);
             this.gbxNotification_1.Location = new System.Drawing.Point(9, 107);
             this.gbxNotification_1.Name = "gbxNotification_1";
-            this.gbxNotification_1.Size = new System.Drawing.Size(252, 318);
+            this.gbxNotification_1.Size = new System.Drawing.Size(305, 374);
             this.gbxNotification_1.TabIndex = 6;
             this.gbxNotification_1.TabStop = false;
             this.gbxNotification_1.Text = "Notification";
@@ -169,7 +172,7 @@
             // btnMaintenance_2_1
             // 
             this.btnMaintenance_2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaintenance_2_1.Location = new System.Drawing.Point(127, 91);
+            this.btnMaintenance_2_1.Location = new System.Drawing.Point(166, 91);
             this.btnMaintenance_2_1.Name = "btnMaintenance_2_1";
             this.btnMaintenance_2_1.Size = new System.Drawing.Size(115, 30);
             this.btnMaintenance_2_1.TabIndex = 17;
@@ -180,7 +183,7 @@
             // btnWarning_2_1
             // 
             this.btnWarning_2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWarning_2_1.Location = new System.Drawing.Point(127, 127);
+            this.btnWarning_2_1.Location = new System.Drawing.Point(166, 127);
             this.btnWarning_2_1.Name = "btnWarning_2_1";
             this.btnWarning_2_1.Size = new System.Drawing.Size(115, 30);
             this.btnWarning_2_1.TabIndex = 16;
@@ -191,7 +194,7 @@
             // btnEmergency_2_1
             // 
             this.btnEmergency_2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmergency_2_1.Location = new System.Drawing.Point(127, 163);
+            this.btnEmergency_2_1.Location = new System.Drawing.Point(166, 163);
             this.btnEmergency_2_1.Name = "btnEmergency_2_1";
             this.btnEmergency_2_1.Size = new System.Drawing.Size(115, 30);
             this.btnEmergency_2_1.TabIndex = 15;
@@ -202,7 +205,7 @@
             // btnFailed_2_1
             // 
             this.btnFailed_2_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFailed_2_1.Location = new System.Drawing.Point(127, 55);
+            this.btnFailed_2_1.Location = new System.Drawing.Point(166, 55);
             this.btnFailed_2_1.Name = "btnFailed_2_1";
             this.btnFailed_2_1.Size = new System.Drawing.Size(115, 30);
             this.btnFailed_2_1.TabIndex = 14;
@@ -341,7 +344,7 @@
             // btnSuccess_1
             // 
             this.btnSuccess_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuccess_1.Location = new System.Drawing.Point(127, 19);
+            this.btnSuccess_1.Location = new System.Drawing.Point(166, 19);
             this.btnSuccess_1.Name = "btnSuccess_1";
             this.btnSuccess_1.Size = new System.Drawing.Size(115, 30);
             this.btnSuccess_1.TabIndex = 9;
@@ -411,13 +414,14 @@
             this.gbx_2.Controls.Add(this.btnConnect_2);
             this.gbx_2.Location = new System.Drawing.Point(351, 12);
             this.gbx_2.Name = "gbx_2";
-            this.gbx_2.Size = new System.Drawing.Size(321, 438);
+            this.gbx_2.Size = new System.Drawing.Size(321, 487);
             this.gbx_2.TabIndex = 8;
             this.gbx_2.TabStop = false;
             this.gbx_2.Text = "LCD 2";
             // 
             // gbxNotification_2
             // 
+            this.gbxNotification_2.Controls.Add(this.btnReset_2);
             this.gbxNotification_2.Controls.Add(this.btnMaintenance_2_2);
             this.gbxNotification_2.Controls.Add(this.btnWarning_2_2);
             this.gbxNotification_2.Controls.Add(this.btnEmergency_2_2);
@@ -432,7 +436,7 @@
             this.gbxNotification_2.Controls.Add(this.btnIdle_2);
             this.gbxNotification_2.Location = new System.Drawing.Point(9, 107);
             this.gbxNotification_2.Name = "gbxNotification_2";
-            this.gbxNotification_2.Size = new System.Drawing.Size(252, 318);
+            this.gbxNotification_2.Size = new System.Drawing.Size(305, 374);
             this.gbxNotification_2.TabIndex = 6;
             this.gbxNotification_2.TabStop = false;
             this.gbxNotification_2.Text = "Notification";
@@ -440,7 +444,7 @@
             // btnMaintenance_2_2
             // 
             this.btnMaintenance_2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaintenance_2_2.Location = new System.Drawing.Point(127, 91);
+            this.btnMaintenance_2_2.Location = new System.Drawing.Point(166, 91);
             this.btnMaintenance_2_2.Name = "btnMaintenance_2_2";
             this.btnMaintenance_2_2.Size = new System.Drawing.Size(115, 30);
             this.btnMaintenance_2_2.TabIndex = 17;
@@ -451,7 +455,7 @@
             // btnWarning_2_2
             // 
             this.btnWarning_2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWarning_2_2.Location = new System.Drawing.Point(127, 127);
+            this.btnWarning_2_2.Location = new System.Drawing.Point(166, 127);
             this.btnWarning_2_2.Name = "btnWarning_2_2";
             this.btnWarning_2_2.Size = new System.Drawing.Size(115, 30);
             this.btnWarning_2_2.TabIndex = 16;
@@ -462,7 +466,7 @@
             // btnEmergency_2_2
             // 
             this.btnEmergency_2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmergency_2_2.Location = new System.Drawing.Point(127, 163);
+            this.btnEmergency_2_2.Location = new System.Drawing.Point(166, 163);
             this.btnEmergency_2_2.Name = "btnEmergency_2_2";
             this.btnEmergency_2_2.Size = new System.Drawing.Size(115, 30);
             this.btnEmergency_2_2.TabIndex = 15;
@@ -473,7 +477,7 @@
             // btnFailed_2_2
             // 
             this.btnFailed_2_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFailed_2_2.Location = new System.Drawing.Point(127, 55);
+            this.btnFailed_2_2.Location = new System.Drawing.Point(166, 55);
             this.btnFailed_2_2.Name = "btnFailed_2_2";
             this.btnFailed_2_2.Size = new System.Drawing.Size(115, 30);
             this.btnFailed_2_2.TabIndex = 14;
@@ -612,7 +616,7 @@
             // btnSuccess_2
             // 
             this.btnSuccess_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuccess_2.Location = new System.Drawing.Point(127, 19);
+            this.btnSuccess_2.Location = new System.Drawing.Point(166, 19);
             this.btnSuccess_2.Name = "btnSuccess_2";
             this.btnSuccess_2.Size = new System.Drawing.Size(115, 30);
             this.btnSuccess_2.TabIndex = 9;
@@ -707,16 +711,38 @@
             this.btnConnect_2.UseVisualStyleBackColor = true;
             this.btnConnect_2.Click += new System.EventHandler(this.btnConnect_2_Click);
             // 
+            // btnReset_2
+            // 
+            this.btnReset_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset_2.Location = new System.Drawing.Point(184, 336);
+            this.btnReset_2.Name = "btnReset_2";
+            this.btnReset_2.Size = new System.Drawing.Size(115, 30);
+            this.btnReset_2.TabIndex = 18;
+            this.btnReset_2.Text = "RESET";
+            this.btnReset_2.UseVisualStyleBackColor = true;
+            this.btnReset_2.Click += new System.EventHandler(this.btnReset_2_Click);
+            // 
+            // btnReset_1
+            // 
+            this.btnReset_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset_1.Location = new System.Drawing.Point(184, 336);
+            this.btnReset_1.Name = "btnReset_1";
+            this.btnReset_1.Size = new System.Drawing.Size(115, 30);
+            this.btnReset_1.TabIndex = 19;
+            this.btnReset_1.Text = "RESET";
+            this.btnReset_1.UseVisualStyleBackColor = true;
+            this.btnReset_1.Click += new System.EventHandler(this.btnReset_1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 461);
+            this.ClientSize = new System.Drawing.Size(684, 511);
             this.Controls.Add(this.gbx_2);
             this.Controls.Add(this.gbx_1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 500);
-            this.MinimumSize = new System.Drawing.Size(700, 500);
+            this.MaximumSize = new System.Drawing.Size(700, 550);
+            this.MinimumSize = new System.Drawing.Size(700, 550);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Display LCD Tester";
@@ -796,6 +822,8 @@
         private System.Windows.Forms.ComboBox cbxDirect_2;
         private System.Windows.Forms.Label lbl7;
         private System.Windows.Forms.Button btnConnect_2;
+        private System.Windows.Forms.Button btnReset_1;
+        private System.Windows.Forms.Button btnReset_2;
     }
 }
 
