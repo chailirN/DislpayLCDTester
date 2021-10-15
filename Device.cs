@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DislpayLCDTester {
+namespace DisplayLCDTester {
     internal class Device {
         internal static int InitialReader(INIReader reader, string portName) {
             string readerSN = string.Empty, readerFrimware = string.Empty, refMessage = string.Empty;

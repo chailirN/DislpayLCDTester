@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DislpayLCDTester")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("DisplayLCDTester")]
+[assembly: AssemblyDescription("Testing LCD Notification View")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DislpayLCDTester")]
+[assembly: AssemblyCompany("PT. Nutech Integrasi")]
+[assembly: AssemblyProduct("DisplayLCDTester")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("caiser666")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible
