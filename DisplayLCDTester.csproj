@@ -36,11 +36,13 @@
     <ApplicationIcon>lcd.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="NICL001">
-      <HintPath>Resource\.dll\NICL001.dll</HintPath>
+    <Reference Include="NICL001, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\.dll\NICL001.dll</HintPath>
     </Reference>
-    <Reference Include="NIRLK003">
-      <HintPath>Resource\.dll\NIRLK003.dll</HintPath>
+    <Reference Include="NIRLK003, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Resources\.dll\NIRLK003.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
