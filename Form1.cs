@@ -43,15 +43,29 @@ namespace DisplayLCDTester {
             reader_1 = new NIKenetics(true);
             reader_2 = new NIKenetics(true);
 
-            string[] direct = { gateIn, gateOut};
+            string[] directions = { gateIn, gateOut};
+            string[] fontTypes = { "CIRCULAR STD 11x19", "ARIAL 8x19", "CIRCULAR STD 15x23" };
+            string[] notifTypes = { "IDLE", "SUCCESS", "FAILED" };
 
-            cbxDirect_1.Items.AddRange(direct);
+            cbxDirect_1.Items.AddRange(directions);
             cbxDirect_1.SelectedIndex = 0;
+
+            cbxFontType_1.Items.AddRange(fontTypes);
+            cbxFontType_1.SelectedIndex = 0;
+
+            cbxNotifType_1.Items.AddRange(notifTypes);
+            cbxNotifType_1.SelectedIndex = 0;
 
             gbxNotification_1.Enabled = false;
 
-            cbxDirect_2.Items.AddRange(direct);
+            cbxDirect_2.Items.AddRange(directions);
             cbxDirect_2.SelectedIndex = 1;
+
+            cbxFontType_2.Items.AddRange(fontTypes);
+            cbxFontType_2.SelectedIndex = 0;
+
+            cbxNotifType_2.Items.AddRange(notifTypes);
+            cbxNotifType_2.SelectedIndex = 0;
 
             gbxNotification_2.Enabled = false;
         }
@@ -193,6 +207,55 @@ namespace DisplayLCDTester {
             }
         }
 
+
+        FontType fontType_1 = FontType.DEFAULT;
+        NotifMessageType notifType_1 = NotifMessageType.IDLE;
+
+        private void cbxFontType_1_SelectedIndexChanged(object sender, EventArgs e) {
+            switch (cbxFontType_1.SelectedIndex) {
+                case 0:
+                fontType_1 = FontType.DEFAULT;
+                break;
+
+                case 1:
+                fontType_1 = FontType.ARIAL_8x19;
+                break;
+
+                case 2:
+                fontType_1 = FontType.CIRCULAR_15x23;
+                break;
+
+                default:
+                break;
+            }
+        }
+
+        private void cbxNotifType_1_SelectedIndexChanged(object sender, EventArgs e) {
+            switch (cbxNotifType_1.SelectedIndex) {
+                case 0:
+                notifType_1 = NotifMessageType.IDLE;
+                break;
+
+                case 1:
+                notifType_1 = NotifMessageType.SUCCESS;
+                break;
+
+                case 2:
+                notifType_1 = NotifMessageType.FAILED;
+                break;
+
+                default:
+                break;
+            }
+        }
+
+        private void btnMessageDynamic_1_Click(object sender, EventArgs e) {
+            if (isReaderStatus_1) {
+                string notif = tbxMessageDynamic_1.Text.Replace("|", LCDTextParam.LCDTextDelimiter);
+                reader_1.SetLCDDisplayNotificationWithDelimeter(notifType_1, fontType_1, AlignType.CENTER, notif);
+            }
+        }
+
         #endregion
 
         #region LCD 2
@@ -304,7 +367,7 @@ namespace DisplayLCDTester {
                 string notif = emergencyNotif_2;
                 reader_2.SetLCDDisplayNotificationWithDelimeter(NotifMessageType.EMERGENCY, FontType.DEFAULT, AlignType.CENTER, notif);
             }
-        }
+        }     
 
         private void btnErrorNetwork_2_Click(object sender, EventArgs e) {
             if (isReaderStatus_2) {
@@ -325,6 +388,56 @@ namespace DisplayLCDTester {
 
                 reader_2.SetLCDDisplayErrorCode(ErrorCodeType.ERROR_DEVICE, "00");
                 reader_2.SetLCDDisplayErrorCode(ErrorCodeType.ERROR_NETWORK, "00");
+            }
+        }
+
+        FontType fontType_2 = FontType.DEFAULT;
+        NotifMessageType notifType_2 = NotifMessageType.IDLE;
+
+        private void cbxFontType_2_SelectedIndexChanged(object sender, EventArgs e) {
+            switch (cbxFontType_2.SelectedIndex) {
+                case 0:
+                fontType_2 = FontType.DEFAULT;
+                break;
+
+                case 1:
+                fontType_2 = FontType.ARIAL_8x19;
+                break;
+
+                case 2:
+                fontType_2 = FontType.CIRCULAR_15x23;
+                break;
+
+                default:
+                break;
+            }
+
+        }
+
+        private void cbxNotifType_2_SelectedIndexChanged(object sender, EventArgs e) {
+            switch (cbxNotifType_2.SelectedIndex) {
+                case 0:
+                notifType_2 = NotifMessageType.IDLE;
+                break;
+
+                case 1:
+                notifType_2 = NotifMessageType.SUCCESS;
+                break;
+
+                case 2:
+                notifType_2 = NotifMessageType.FAILED;
+                break;
+
+                default:
+                break;
+            }
+
+        }
+
+        private void btnMessageDynamic_2_Click(object sender, EventArgs e) {
+            if (isReaderStatus_2) {
+                string notif = tbxMessageDynamic_2.Text.Replace("|", LCDTextParam.LCDTextDelimiter);
+                reader_2.SetLCDDisplayNotificationWithDelimeter(notifType_2, fontType_2, AlignType.CENTER, notif);
             }
         }
         #endregion

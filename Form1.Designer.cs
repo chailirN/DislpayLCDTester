@@ -30,6 +30,14 @@
             this.lbl1 = new System.Windows.Forms.Label();
             this.gbx_1 = new System.Windows.Forms.GroupBox();
             this.gbxNotification_1 = new System.Windows.Forms.GroupBox();
+            this.gbxMessageDynamic_1 = new System.Windows.Forms.GroupBox();
+            this.cbxNotifType_1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbxFontType_1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tbxMessageDynamic_1 = new System.Windows.Forms.TextBox();
+            this.btnMessageDynamic_1 = new System.Windows.Forms.Button();
             this.btnReset_1 = new System.Windows.Forms.Button();
             this.btnMaintenance_2_1 = new System.Windows.Forms.Button();
             this.btnWarning_2_1 = new System.Windows.Forms.Button();
@@ -84,8 +92,17 @@
             this.btnConnect_2 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl13 = new System.Windows.Forms.Label();
+            this.gbxMessageDynamic_2 = new System.Windows.Forms.GroupBox();
+            this.cbxNotifType_2 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbxFontType_2 = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbxMessageDynamic_2 = new System.Windows.Forms.TextBox();
+            this.btnMessageDynamic_2 = new System.Windows.Forms.Button();
             this.gbx_1.SuspendLayout();
             this.gbxNotification_1.SuspendLayout();
+            this.gbxMessageDynamic_1.SuspendLayout();
             this.gbxErrorDevice_1.SuspendLayout();
             this.gbxErrorNetwork_1.SuspendLayout();
             this.gbx_2.SuspendLayout();
@@ -93,6 +110,7 @@
             this.gbxErrorDevice_2.SuspendLayout();
             this.gbxErrorNetwork_2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbxMessageDynamic_2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConnect_1
@@ -146,13 +164,14 @@
             this.gbx_1.Controls.Add(this.btnConnect_1);
             this.gbx_1.Location = new System.Drawing.Point(12, 12);
             this.gbx_1.Name = "gbx_1";
-            this.gbx_1.Size = new System.Drawing.Size(321, 455);
+            this.gbx_1.Size = new System.Drawing.Size(321, 680);
             this.gbx_1.TabIndex = 5;
             this.gbx_1.TabStop = false;
             this.gbx_1.Text = "LCD 1";
             // 
             // gbxNotification_1
             // 
+            this.gbxNotification_1.Controls.Add(this.gbxMessageDynamic_1);
             this.gbxNotification_1.Controls.Add(this.btnReset_1);
             this.gbxNotification_1.Controls.Add(this.btnMaintenance_2_1);
             this.gbxNotification_1.Controls.Add(this.btnWarning_2_1);
@@ -168,15 +187,95 @@
             this.gbxNotification_1.Controls.Add(this.btnIdle_1);
             this.gbxNotification_1.Location = new System.Drawing.Point(9, 107);
             this.gbxNotification_1.Name = "gbxNotification_1";
-            this.gbxNotification_1.Size = new System.Drawing.Size(305, 341);
+            this.gbxNotification_1.Size = new System.Drawing.Size(305, 567);
             this.gbxNotification_1.TabIndex = 6;
             this.gbxNotification_1.TabStop = false;
             this.gbxNotification_1.Text = "Notification";
             // 
+            // gbxMessageDynamic_1
+            // 
+            this.gbxMessageDynamic_1.Controls.Add(this.cbxNotifType_1);
+            this.gbxMessageDynamic_1.Controls.Add(this.label3);
+            this.gbxMessageDynamic_1.Controls.Add(this.label2);
+            this.gbxMessageDynamic_1.Controls.Add(this.cbxFontType_1);
+            this.gbxMessageDynamic_1.Controls.Add(this.label1);
+            this.gbxMessageDynamic_1.Controls.Add(this.tbxMessageDynamic_1);
+            this.gbxMessageDynamic_1.Controls.Add(this.btnMessageDynamic_1);
+            this.gbxMessageDynamic_1.Location = new System.Drawing.Point(6, 363);
+            this.gbxMessageDynamic_1.Name = "gbxMessageDynamic_1";
+            this.gbxMessageDynamic_1.Size = new System.Drawing.Size(293, 198);
+            this.gbxMessageDynamic_1.TabIndex = 11;
+            this.gbxMessageDynamic_1.TabStop = false;
+            this.gbxMessageDynamic_1.Text = "Message Dynamic";
+            // 
+            // cbxNotifType_1
+            // 
+            this.cbxNotifType_1.FormattingEnabled = true;
+            this.cbxNotifType_1.Location = new System.Drawing.Point(69, 141);
+            this.cbxNotifType_1.Name = "cbxNotifType_1";
+            this.cbxNotifType_1.Size = new System.Drawing.Size(218, 21);
+            this.cbxNotifType_1.TabIndex = 13;
+            this.cbxNotifType_1.SelectedIndexChanged += new System.EventHandler(this.cbxNotifType_1_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 144);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Notif Type";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 117);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Font Type";
+            // 
+            // cbxFontType_1
+            // 
+            this.cbxFontType_1.FormattingEnabled = true;
+            this.cbxFontType_1.Location = new System.Drawing.Point(69, 114);
+            this.cbxFontType_1.Name = "cbxFontType_1";
+            this.cbxFontType_1.Size = new System.Drawing.Size(218, 21);
+            this.cbxFontType_1.TabIndex = 10;
+            this.cbxFontType_1.SelectedIndexChanged += new System.EventHandler(this.cbxFontType_1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Message";
+            // 
+            // tbxMessageDynamic_1
+            // 
+            this.tbxMessageDynamic_1.Location = new System.Drawing.Point(69, 27);
+            this.tbxMessageDynamic_1.Multiline = true;
+            this.tbxMessageDynamic_1.Name = "tbxMessageDynamic_1";
+            this.tbxMessageDynamic_1.Size = new System.Drawing.Size(218, 81);
+            this.tbxMessageDynamic_1.TabIndex = 8;
+            // 
+            // btnMessageDynamic_1
+            // 
+            this.btnMessageDynamic_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessageDynamic_1.Location = new System.Drawing.Point(232, 168);
+            this.btnMessageDynamic_1.Name = "btnMessageDynamic_1";
+            this.btnMessageDynamic_1.Size = new System.Drawing.Size(55, 23);
+            this.btnMessageDynamic_1.TabIndex = 7;
+            this.btnMessageDynamic_1.Text = "SET";
+            this.btnMessageDynamic_1.UseVisualStyleBackColor = true;
+            this.btnMessageDynamic_1.Click += new System.EventHandler(this.btnMessageDynamic_1_Click);
+            // 
             // btnReset_1
             // 
             this.btnReset_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset_1.Location = new System.Drawing.Point(208, 305);
+            this.btnReset_1.Location = new System.Drawing.Point(208, 304);
             this.btnReset_1.Name = "btnReset_1";
             this.btnReset_1.Size = new System.Drawing.Size(91, 30);
             this.btnReset_1.TabIndex = 19;
@@ -429,13 +528,14 @@
             this.gbx_2.Controls.Add(this.btnConnect_2);
             this.gbx_2.Location = new System.Drawing.Point(351, 12);
             this.gbx_2.Name = "gbx_2";
-            this.gbx_2.Size = new System.Drawing.Size(321, 455);
+            this.gbx_2.Size = new System.Drawing.Size(321, 680);
             this.gbx_2.TabIndex = 8;
             this.gbx_2.TabStop = false;
             this.gbx_2.Text = "LCD 2";
             // 
             // gbxNotification_2
             // 
+            this.gbxNotification_2.Controls.Add(this.gbxMessageDynamic_2);
             this.gbxNotification_2.Controls.Add(this.btnReset_2);
             this.gbxNotification_2.Controls.Add(this.btnMaintenance_2_2);
             this.gbxNotification_2.Controls.Add(this.btnWarning_2_2);
@@ -451,7 +551,7 @@
             this.gbxNotification_2.Controls.Add(this.btnIdle_2);
             this.gbxNotification_2.Location = new System.Drawing.Point(9, 107);
             this.gbxNotification_2.Name = "gbxNotification_2";
-            this.gbxNotification_2.Size = new System.Drawing.Size(305, 341);
+            this.gbxNotification_2.Size = new System.Drawing.Size(305, 567);
             this.gbxNotification_2.TabIndex = 6;
             this.gbxNotification_2.TabStop = false;
             this.gbxNotification_2.Text = "Notification";
@@ -459,7 +559,7 @@
             // btnReset_2
             // 
             this.btnReset_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset_2.Location = new System.Drawing.Point(208, 305);
+            this.btnReset_2.Location = new System.Drawing.Point(208, 304);
             this.btnReset_2.Name = "btnReset_2";
             this.btnReset_2.Size = new System.Drawing.Size(91, 30);
             this.btnReset_2.TabIndex = 18;
@@ -740,9 +840,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::DisplayLCDTester.Properties.Resources.Logo_Nutech_ok;
-            this.pictureBox1.Location = new System.Drawing.Point(465, 473);
+            this.pictureBox1.Location = new System.Drawing.Point(547, 698);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(125, 51);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
@@ -751,31 +851,113 @@
             // 
             this.lbl13.AutoSize = true;
             this.lbl13.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl13.Location = new System.Drawing.Point(418, 473);
+            this.lbl13.Location = new System.Drawing.Point(501, 698);
             this.lbl13.Name = "lbl13";
             this.lbl13.Size = new System.Drawing.Size(43, 12);
             this.lbl13.TabIndex = 10;
             this.lbl13.Text = "made by.";
             // 
+            // gbxMessageDynamic_2
+            // 
+            this.gbxMessageDynamic_2.Controls.Add(this.cbxNotifType_2);
+            this.gbxMessageDynamic_2.Controls.Add(this.label4);
+            this.gbxMessageDynamic_2.Controls.Add(this.label5);
+            this.gbxMessageDynamic_2.Controls.Add(this.cbxFontType_2);
+            this.gbxMessageDynamic_2.Controls.Add(this.label6);
+            this.gbxMessageDynamic_2.Controls.Add(this.tbxMessageDynamic_2);
+            this.gbxMessageDynamic_2.Controls.Add(this.btnMessageDynamic_2);
+            this.gbxMessageDynamic_2.Location = new System.Drawing.Point(6, 363);
+            this.gbxMessageDynamic_2.Name = "gbxMessageDynamic_2";
+            this.gbxMessageDynamic_2.Size = new System.Drawing.Size(293, 198);
+            this.gbxMessageDynamic_2.TabIndex = 19;
+            this.gbxMessageDynamic_2.TabStop = false;
+            this.gbxMessageDynamic_2.Text = "Message Dynamic";
+            // 
+            // cbxNotifType_2
+            // 
+            this.cbxNotifType_2.FormattingEnabled = true;
+            this.cbxNotifType_2.Location = new System.Drawing.Point(69, 141);
+            this.cbxNotifType_2.Name = "cbxNotifType_2";
+            this.cbxNotifType_2.Size = new System.Drawing.Size(218, 21);
+            this.cbxNotifType_2.TabIndex = 13;
+            this.cbxNotifType_2.SelectedIndexChanged += new System.EventHandler(this.cbxNotifType_2_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 144);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Notif Type";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 117);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Font Type";
+            // 
+            // cbxFontType_2
+            // 
+            this.cbxFontType_2.FormattingEnabled = true;
+            this.cbxFontType_2.Location = new System.Drawing.Point(69, 114);
+            this.cbxFontType_2.Name = "cbxFontType_2";
+            this.cbxFontType_2.Size = new System.Drawing.Size(218, 21);
+            this.cbxFontType_2.TabIndex = 10;
+            this.cbxFontType_2.SelectedIndexChanged += new System.EventHandler(this.cbxFontType_2_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(50, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Message";
+            // 
+            // tbxMessageDynamic_2
+            // 
+            this.tbxMessageDynamic_2.Location = new System.Drawing.Point(69, 27);
+            this.tbxMessageDynamic_2.Multiline = true;
+            this.tbxMessageDynamic_2.Name = "tbxMessageDynamic_2";
+            this.tbxMessageDynamic_2.Size = new System.Drawing.Size(218, 81);
+            this.tbxMessageDynamic_2.TabIndex = 8;
+            // 
+            // btnMessageDynamic_2
+            // 
+            this.btnMessageDynamic_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMessageDynamic_2.Location = new System.Drawing.Point(232, 168);
+            this.btnMessageDynamic_2.Name = "btnMessageDynamic_2";
+            this.btnMessageDynamic_2.Size = new System.Drawing.Size(55, 23);
+            this.btnMessageDynamic_2.TabIndex = 7;
+            this.btnMessageDynamic_2.Text = "SET";
+            this.btnMessageDynamic_2.UseVisualStyleBackColor = true;
+            this.btnMessageDynamic_2.Click += new System.EventHandler(this.btnMessageDynamic_2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 561);
+            this.ClientSize = new System.Drawing.Size(684, 761);
             this.Controls.Add(this.lbl13);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.gbx_2);
             this.Controls.Add(this.gbx_1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(700, 600);
-            this.MinimumSize = new System.Drawing.Size(700, 600);
+            this.MaximumSize = new System.Drawing.Size(700, 800);
+            this.MinimumSize = new System.Drawing.Size(700, 800);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Display LCD Tester";
             this.gbx_1.ResumeLayout(false);
             this.gbx_1.PerformLayout();
             this.gbxNotification_1.ResumeLayout(false);
+            this.gbxMessageDynamic_1.ResumeLayout(false);
+            this.gbxMessageDynamic_1.PerformLayout();
             this.gbxErrorDevice_1.ResumeLayout(false);
             this.gbxErrorDevice_1.PerformLayout();
             this.gbxErrorNetwork_1.ResumeLayout(false);
@@ -788,6 +970,8 @@
             this.gbxErrorNetwork_2.ResumeLayout(false);
             this.gbxErrorNetwork_2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbxMessageDynamic_2.ResumeLayout(false);
+            this.gbxMessageDynamic_2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -855,6 +1039,22 @@
         private System.Windows.Forms.Button btnReset_2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl13;
+        private System.Windows.Forms.GroupBox gbxMessageDynamic_1;
+        private System.Windows.Forms.ComboBox cbxNotifType_1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbxFontType_1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbxMessageDynamic_1;
+        private System.Windows.Forms.Button btnMessageDynamic_1;
+        private System.Windows.Forms.GroupBox gbxMessageDynamic_2;
+        private System.Windows.Forms.ComboBox cbxNotifType_2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cbxFontType_2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox tbxMessageDynamic_2;
+        private System.Windows.Forms.Button btnMessageDynamic_2;
     }
 }
 
